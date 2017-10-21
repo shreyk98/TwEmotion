@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="stylesheet/main.css">
+  <script type="text/javascript" src="javascript/main.js"></script>
+  <script>
+  // function randomKey(obj) {
+  //     var ret;
+  //     var c = 0;
+  //     for (var key in obj)
+  //         if (Math.random() < 1/++c)
+  //            ret = key;
+  //     return ret;
+  // }
+
+  var emotionToSong =  { "anger" : "Songs/anger.mp3",  "contempt" : "Songs/contempt.mp3",
+  "disgust" : "Songs/disgust.mp3", "fear" : "Songs/fear.mp3",
+  "happiness" : "Songs/happy.mp3", "neutral" : "",
+   "sadness" : "Song/sad.mp3", "surprise" : "Songs/surprise.mp3"
+   }
+//   window.onload = function() {
+//   setInterval( function() {
+//   	var audio = document.getElementById('aud');
+// 	if (currentEmotion != "") {
+//   	audio.src = emotionToSong[currentEmotion];
+//   	audio.play();
+// } else {
+// 	console.log("no current emotion");
+// }
+//   	setTimeout(function() {
+//   		audio.pause();
+//   	}, 5000);
+// }, 1000);
+//   };
+  </script>
+  <body>
+      <!-- Add a placeholder for the Twitch embed -->
+	  <h1>TwEmotion</h1>
+	  <p>Feel the streamer's joy and frustration through our playlist on the website</p>
+      <div id="twitch-embed"></div>
+
+      <!-- Load the Twitch embed script -->
+      <script src="https://embed.twitch.tv/embed/v1.js"></script>
+      <script type="text/javascript">
+        new Twitch.Embed("twitch-embed", {
+          width: 1152,
+          height: 648,
+          channel: "dekar173"
+        });
+      </script>
+    </body>
+	<audio id="aud" autoplay>
+              <source src="">
+                If you're reading this, audio isn't supported.
+              </audio>
+  </html>
